@@ -40,6 +40,8 @@ if __name__ == "__main__":
           "生成的图片会添加后缀\n"
           "输入q退出程序\n")
     img_path = input("请输入图片路径: ")
+    img_path = img_path.strip('\'"')
+    img_path = get_img_path(img_path)
     while img_path != "q":
         img_path = img_path.strip('\'"')
         remove_bg(img_path)
